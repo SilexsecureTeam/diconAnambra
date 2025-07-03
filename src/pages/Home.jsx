@@ -8,6 +8,11 @@ import face1 from '../assets/face1.png';
 import face2 from '../assets/face2.png';
 import face3 from '../assets/face3.png';
 import face4 from '../assets/face4.png';
+import spons1 from '../assets/spons1.png';
+import spons2 from '../assets/spons2.png';
+import spons3 from '../assets/spons3.png';
+import logo from '../assets/logo.png';
+import backg from '../assets/background.png';
 import feature1 from '../assets/feature1.png';
 import feature2 from '../assets/feature2.png';
 import feature3 from '../assets/feature3.png';
@@ -251,18 +256,14 @@ export default function Home() {
                 <h3 className="text-3xl font-semibold text-gray-800 mb-2">Background and Rationale</h3>
                 <div className='w-[150px] h-1.5 rounded-sm bg-[#C08032] mb-6' />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 text-gray-700">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Est tristique maecenas aliquet justo purus tortor nulla morbi. Dolor id faucibus praesent augue morbi dignissim erat. Id id eros nunc neque sed ultricies. Mauris libero scelerisque et tellus ornare. Integer nec in nullam phasellus id dignissim nunc. A elit vulputate orci pretium purus pulvinar eget. Odio metus amet arcu massa.
+                    <p className='leading-[1.9]'>
+                        Anambra State, a key economic hub in Nigeria’s South-East region, has witnessed commendable strides in industrial development, entrepreneurship, and infrastructure renewal. However, the pace of business growth and investor confidence is increasingly threatened by a surge in security challenges.
+The interconnection between Security and Economic growth has become more pronounced, with businesses becoming vulnerable to operational disruptions and communities suffering from restricted access to development opportunities due to prevailing insecurity.
+Against this backdrop, the Anambra Security Summit is conceived as a strategic, multi-stakeholder engagement to diagnose the underlying factors driving insecurity in the state and region and to propose technology-driven, sustainable, and collaborative responses. 
+“The Anambra Security Summit is not merely a dialogue platform but a springboard for concrete, far-reaching action towards a safer and more prosperous Anambra State. With collective effort, innovative thinking, and inclusive policy, a safer, more prosperous Anambra is not only possible—it is within reach.
+
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Est tristique maecenas aliquet justo purus tortor nulla morbi. Dolor id faucibus praesent augue morbi dignissim erat. Id id eros nunc neque sed ultricies. Mauris libero scelerisque et tellus ornare. Integer nec in nullam phasellus id dignissim nunc. A elit vulputate orci pretium purus pulvinar eget. Odio metus amet arcu massa.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Est tristique maecenas aliquet justo purus tortor nulla morbi. Dolor id faucibus praesent augue morbi dignissim erat. Id id eros nunc neque sed ultricies. Mauris libero scelerisque et tellus ornare. Integer nec in nullam phasellus id dignissim nunc. A elit vulputate orci pretium purus pulvinar eget. Odio metus amet arcu massa.
-                    </p>
-                    <p>
-                        Dolor sit amet consectetur. Est tristique maecenas aliquet justo purus tortor nulla morbi. Dolor id faucibus praesent augue morbi dignissim erat. Id id eros nunc neque sed ultricies. Mauris libero scelerisque et tellus ornare. Integer nec in nullam phasellus id dignissim nunc. A elit vulputate orci pretium purus pulvinar eget.
-                    </p>
+                    <img src={backg} alt="" className='max-h-[400px] w-full' />
                 </div>
                 <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div />
@@ -371,10 +372,10 @@ export default function Home() {
                             </button>
                         </div>
                         <div className="mt-6 lg:mt-0 grid grid-cols-2 gap-4 gap-x-2 lg:gap-6">
-                            <img src={face3} alt='Sponsor' className="w-30 h-auto" />
-                            <img src={face3} alt='Sponsor' className="w-30 h-auto" />
-                            <img src={face3} alt='Sponsor' className="w-30 h-auto" />
-                            <img src={face3} alt='Sponsor' className="w-30 h-auto" />
+                            <img src={spons1} alt='Sponsor' className="w-30 h-auto" />
+                            <img src={logo} alt='Sponsor' className="w-30 h-auto" />
+                            <img src={spons2} alt='Sponsor' className="w-30 h-auto" />
+                            <img src={spons3} alt='Sponsor' className="w-30 h-auto" />
                         </div>
                     </motion.div>
 
