@@ -23,6 +23,14 @@ import crowdImg from '../assets/crowd.png';
 import summit from '../assets/summit.png';
 import arrow from '../assets/VectorArr.png';
 import ShieldIcon from '../assets/shieldIcon.png';
+import target1 from '../assets/target1.png';
+import target2 from '../assets/target2.png';
+import target3 from '../assets/target3.png';
+import target4 from '../assets/target4.png';
+import target5 from '../assets/target5.png';
+import target6 from '../assets/target6.png';
+import target7 from '../assets/target7.png';
+import target8 from '../assets/target8.png';
 // import sponsorPlaceholder from '../assets/sponsor-placeholder.png';
 import { motion } from 'framer-motion';
 
@@ -534,25 +542,46 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                     </div>
                     <div className="flex flex-col gap-3">
                         { [
-                            'Keynote Presentations',
-                            'Thematic Panel Discussions',
-                            'Case Study Presentations',
-                            'Interactive Town Hall Session',
-                            'Technology Exhibition',
-                            'Closed-Door Roundtable With..',
-                            'Launch of the Anambra State Security Fund (ASSF)',
-                        ].map((title, idx) => (
+                            {
+                                title: 'Keynote Presentations',
+                                content: 'Hear from top government officials, security experts, and business leaders as they set the tone for the summit with insightful keynote addresses.'
+                            },
+                            {
+                                title: 'Thematic Panel Discussions',
+                                content: 'Engage with panels of experts discussing critical security and economic topics relevant to Anambra and the South-East region.'
+                            },
+                            {
+                                title: 'Case Study Presentations',
+                                content: 'Learn from real-world examples and success stories in security management, technology adoption, and community engagement.'
+                            },
+                            {
+                                title: 'Interactive Town Hall Session',
+                                content: 'Participate in open dialogue between stakeholders, government, and the public to address pressing security concerns.'
+                            },
+                            {
+                                title: 'Technology Exhibition',
+                                content: 'Discover innovative security solutions and technology providers showcasing the latest tools and systems.'
+                            },
+                            {
+                                title: 'Closed-Door Roundtable With..',
+                                content: 'Exclusive, invitation-only discussions among key decision-makers to develop actionable strategies.'
+                            },
+                            {
+                                title: 'Launch of the Anambra State Security Fund (ASSF)',
+                                content: 'Official unveiling of a dedicated fund to support security initiatives and sustainable development in Anambra.'
+                            },
+                        ].map((item, idx) => (
                             <details key={idx} className="group border-b border-[#E5E5E5] py-3">
                                 <summary className="flex items-center justify-between cursor-pointer select-none">
                                     <div className="flex items-center gap-2 text-[#C08032] font-medium">
                                         <span className="inline-flex items-center justify-center w-6 h-6 rounded-full border-[#C08032] mr-2">
                                             <svg width="16" height="16" fill="none" stroke="#C08032" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
                                         </span>
-                                        <span className="text-[#222] font-medium text-base md:text-lg">{title}</span>
+                                        <span className="text-[#222] font-medium text-base md:text-lg">{item.title}</span>
                                     </div>
                                     <span className="text-[#C08032] text-sm font-medium group-open:rotate-180 transition-transform duration-200">Read More <svg className="inline ml-1" width="16" height="16" fill="none" stroke="#C08032" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
                                 </summary>
-                                {/* Optionally add content here for expanded details */}
+                                <div className="pl-10 pr-2 py-2 text-[#444] text-sm md:text-base leading-relaxed max-w-2xl">{item.content}</div>
                             </details>
                         ))}
                     </div>
@@ -588,52 +617,51 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                         <div className="w-24 h-1 rounded bg-[#C08032]" />
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        {/* Each card: icon, label */}
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-building-columns text-[#C08032] text-2xl"></i>
+                                <img src={target1} alt="Anambra State Government Officials" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Anambra State Government Officials</span>
                         </div>
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-shield-halved text-[#C08032] text-2xl"></i>
+                                <img src={target2} alt="Heads of Security Agencies" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Heads of Security Agencies (Army, Police, DSS, Civil Defence, etc.)</span>
                         </div>
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-sitemap text-[#C08032] text-2xl"></i>
+                                <img src={target3} alt="Local Government Chairmen and Traditional Rulers" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Local Government Chairmen and Traditional Rulers</span>
                         </div>
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-people-group text-[#C08032] text-2xl"></i>
+                                <img src={target4} alt="Community Leaders and Youth Organizations" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Community Leaders and Youth Organizations</span>
                         </div>
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-user-shield text-[#C08032] text-2xl"></i>
+                                <img src={target5} alt="Defence and Security Technology Providers" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Defence and Security Technology Providers</span>
                         </div>
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-briefcase text-[#C08032] text-2xl"></i>
+                                <img src={target6} alt="Members of the Organized Private Sector" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Members of the Organized Private Sector</span>
                         </div>
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-plus text-[#C08032] text-2xl"></i>
+                                <img src={target7} alt="Civil Society Organizations" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Civil Society Organizations</span>
                         </div>
                         <div className="flex flex-col items-center bg-[#FFF7F0] rounded-[12px] p-5 text-center shadow-sm min-h-[120px]">
                             <span className="inline-flex items-center justify-center w-12 h-12 rounded-[10px] bg-white mb-3">
-                                <i className="fa-solid fa-graduation-cap text-[#C08032] text-2xl"></i>
+                                <img src={target8} alt="Academic and Research Institutions" className="w-8 h-8" />
                             </span>
                             <span className="text-[#222] text-sm md:text-base font-medium leading-tight">Academic and Research Institutions</span>
                         </div>
