@@ -41,7 +41,7 @@ export default function About() {
         <>
             <Header />
             <motion.section
-                className="bg-white py-0 pt-18 px-4 md:px-16 min-h-[70vh]"
+                className="bg-white py-0 pt-24 px-4 md:px-16 min-h-[70vh]"
                 initial="hidden"
                 animate="visible"
                 variants={fadeIn}

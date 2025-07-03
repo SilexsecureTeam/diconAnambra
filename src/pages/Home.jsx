@@ -132,7 +132,7 @@ export default function Home() {
         <>
             <Header />
             <motion.section
-                className="bg-gray-100 py-22 px-4 md:px-16"
+                className="bg-gray-100 py-24 px-4 md:px-16"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -193,7 +193,7 @@ export default function Home() {
 
                         {/* Right Image */}
                         <motion.div
-                            className="flex-1 relative"
+                            className="flex-1 relative overflow-hidden" // Added overflow-hidden
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.3 }}
@@ -201,7 +201,7 @@ export default function Home() {
                         >
                             {/* Outer border div */}
                             <div
-                                className="relative w-full md:max-w-[72%] ml-auto mr-5 md:h-[520px]" // Added fixed height
+                                className="relative w-full md:max-w-[72%] ml-auto mr-5" // Removed md:h-[520px]
                                 style={{
                                     clipPath: 'polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%)',
                                     background: '#000',
@@ -211,7 +211,7 @@ export default function Home() {
                             >
                                 {/* Inner image div */}
                                 <div
-                                    className="h-full"
+                                    className="h-auto min-h-[300px]" // Use min-h for structure, h-auto for flexibility
                                     style={{
                                         clipPath: 'polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%)',
                                         background: '#C08032',
@@ -222,14 +222,14 @@ export default function Home() {
                                         src={hostImg}
                                         alt="Chief Host"
                                         className="w-full h-full object-cover"
-                                        style={{ display: 'block' }}
+                                        style={{ display: 'block', maxHeight: '520px' }} // Prevents image from overflowing
                                     />
                                 </div>
                                 <div className="absolute bottom-0 rounded-sm -right-5 z-10 w-[300px] bg-black bg-opacity-75 text-white text-center py-2">
                                     Chief Host
                                 </div>
                             </div>
-                            <div className="absolute md:-bottom-10 w-full md:w-[435px] md:right-0 mb-4 mr-4 bg-[#C08032] text-white px-4 py-2 text-sm">
+                            <div className="absolute md:bottom-10 w-full md:w-[435px] md:right-0 mb-4 mr-4 bg-[#C08032] text-white px-4 py-2 text-sm">
                                 <div className="font-semibold">His Excellency,</div>
                                 <div>Prof. Charles Chukwuma Soludo, CFR</div>
                                 <div className="text-xs">Executive Governor, Anambra State</div>
@@ -415,7 +415,7 @@ export default function Home() {
                 </div>
             </motion.section>
             <motion.section
-                className="px-4 md:px-16 py-12 bg-white w-full mx-auto overflow-x-hidden"
+                className="px-4 md:px-16 py-12 bg-white w-full mx-auto overflow-x-hidden overflow-y-hidden" // Added overflow-y-hidden
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -428,7 +428,7 @@ export default function Home() {
                         {features.slice(0, 4).map((feature, idx) => (
                             <motion.div
                                 key={idx}
-                                className="flex flex-col md:flex-row items-start md:items-start gap-6 h-full bg-white rounded-lg p-2 md:p-6"
+                                className="flex flex-col md:flex-row items-start md:items-start gap-6 h-full bg-white rounded-lg p-2 md:p-6 overflow-hidden" // Added overflow-hidden
                                 custom={idx}
                                 initial="hidden"
                                 whileInView="visible"
@@ -439,7 +439,7 @@ export default function Home() {
                                     <img
                                         src={feature.image}
                                         alt={feature.title}
-                                        className="w-full object-cover max-h-48 md:max-h-44"
+                                        className="w-full h-auto object-cover max-h-48 md:max-h-44" // h-auto for flexibility
                                     />
                                 </div>
                                 <div className="w-full md:w-1/2 flex flex-col justify-center">
@@ -454,7 +454,7 @@ export default function Home() {
                         {features.slice(4).map((feature, idx) => (
                             <motion.div
                                 key={idx}
-                                className="flex flex-col items-center bg-white rounded-lg p-2 md:p-6 h-full justify-between"
+                                className="flex flex-col items-center bg-white rounded-lg p-2 md:p-6 h-full justify-between overflow-hidden" // Added overflow-hidden
                                 custom={idx}
                                 initial="hidden"
                                 whileInView="visible"
@@ -464,7 +464,7 @@ export default function Home() {
                                 <img
                                     src={feature.image}
                                     alt={feature.title}
-                                    className="w-full object-cover mb-4 max-h-48 md:max-h-56"
+                                    className="w-full h-auto object-cover mb-4 max-h-48 md:max-h-56" // h-auto for flexibility
                                 />
                                 <h3 className="text-xl text-[#183354] md:text-2xl font-semibold text-left">{feature.title}</h3>
                                 <p className="mt-2 text-[#545E69] text-sm text-left">{feature.description}</p>
