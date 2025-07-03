@@ -20,7 +20,7 @@ import feature4 from '../assets/feature4.png';
 import feature5 from '../assets/feature5.png';
 import feature6 from '../assets/feature6.png';
 import crowdImg from '../assets/crowd.png';
-import summit from '../assets/summit.png';
+import summit from '../assets/summit.jpg';
 import arrow from '../assets/VectorArr.png';
 import ShieldIcon from '../assets/shieldIcon.png';
 import target1 from '../assets/target1.png';
@@ -70,29 +70,33 @@ const features = [
 const objectives = [
     {
         title: 'Strategic Dialogue',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae velit purus, elementum sit maecenas vel sodales vestibulum urna. Consequat.',
+        description: 'Facilitate high-level dialogue among government officials, security operatives, private sector leaders, and civil society to identify and analyze security trends affecting Anambra State and the South-East region',
     },
     {
         title: 'Collaborative Security Frameworks',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae velit purus, elementum sit maecenas vel sodales vestibulum urna. Consequat.',
+        description: 'Build a coordinated and inclusive security response architecture that integrates community-based intelligence, state security apparatus, and private sector resources.',
     },
     {
         title: 'Technology Integration',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae velit purus, elementum sit maecenas vel sodales vestibulum urna. Consequat.',
+        description: 'Explore the role of modern defence and surveillance technologies, artificial intelligence, and digital intelligence platforms in crime prevention and early warning systems.',
     },
     {
         title: 'Private Sector Engagement',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae velit purus, elementum sit maecenas vel sodales vestibulum urna. Consequat.',
+        description: 'Identify how businesses and investors can support security initiatives while advocating for a safer, more stable business environment.',
+    },
+    {
+        title: 'Youth & Community Engagement',
+        description: 'Promote community policing initiatives, youth engagement and rehabilitation programmes that directly address grassroots drivers of insecurity.',
     },
 ];
 
 
 const deliverables = [
-    { title: 'Anambra Integrated Security Strategy Document (AISS)', text: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris fr ut. Turpis id sodales tincidunt aliquet nam duis augue id ac.' },
-    { title: 'Public–Private Security Partnership Charter (PPSPC)', text: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris fr ut. Turpis id sodales tincidunt aliquet nam duis augue id ac.' },
-    { title: 'Tech Showcase and Solution Fair', text: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris fr ut. Turpis id sodales tincidunt aliquet nam duis augue id ac.' },
-    { title: 'Community Intelligence Network Framework', text: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris fr ut. Turpis id sodales tincidunt aliquet nam duis augue id ac.' },
-    { title: 'Security Skills Capacity Building Report', text: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris fr ut. Turpis id sodales tincidunt aliquet nam duis augue id ac.' },
+    { title: 'Anambra Integrated Security Strategy Document (AISS)', text: 'A jointly-developed roadmap with actionable recommendations, timelines, and stakeholder responsibilities' },
+    { title: 'Public–Private Security Partnership Charter (PPSPC)', text: 'model between the Anambra State Government and private sector players on security infrastructure, funding, and information sharing.' },
+    { title: 'Tech Showcase and Solution Fair', text: 'A demonstration of cutting-edge defence technologies, smart surveillance systems, and data-driven tools applicable to urban and rural security challenges.' },
+    { title: 'Community Intelligence Network Framework', text: 'A scalable grassroots framework for real-time threat reporting, intelligence sharing, and community engagement in crime detection and prevention.' },
+    { title: 'Security Skills Capacity Building Report', text: 'A summary of workforce needs and opportunities for training youths and security agents in modern defence technologies, intelligence analysis, and rapid response operations.' },
 ];
 
 const profiles = [
@@ -271,7 +275,9 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
 “The Anambra Security Summit is not merely a dialogue platform but a springboard for concrete, far-reaching action towards a safer and more prosperous Anambra State. With collective effort, innovative thinking, and inclusive policy, a safer, more prosperous Anambra is not only possible—it is within reach.
 
                     </p>
-                    <img src={backg} alt="" className='max-h-[470px] w-full' />
+                    <div className='relative h-[500px]'>
+                    <img src={backg} alt="" className='h-full w-full' />
+                    </div>
                 </div>
                 <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div />
@@ -311,11 +317,11 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                     </motion.div>
 
                     {/* Profiles Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 md:gap-16 gap-y-5 mb-8">
                         {profiles.map((p, idx) => (
                             <motion.div
                                 key={idx}
-                                className={`text-center flex flex-col items-center justify-start p-3 pl-[30%] bg-white border-[#B5B5C180] ${idx !== 0 ? 'lg:border-l' : ''}`}
+                                className={`text-center flex flex-col items-center justify-start p-3 md:pl-[30%] bg-white border-[#B5B5C180] ${idx !== 0 ? 'lg:border-l' : ''}`}
                                 custom={idx}
                                 initial="hidden"
                                 whileInView="visible"
@@ -337,7 +343,7 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
 
                     {/* Banner Image */}
                     <motion.div
-                        className="w-full overflow-hidden"
+                        className="w-full overflow-hidden" // Adjusted for better responsiveness
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
@@ -346,7 +352,7 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                         <img
                             src={crowdImg}
                             alt="Summit audience"
-                            className="w-full h-[500px] object-cover"
+                            className="w-full"
                         />
                     </motion.div>
                 </div>
@@ -416,7 +422,7 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                                 >
                                     <img src={ShieldIcon} alt="" className='w-[40px] mb-3' />
                                     <h4 className="font-semibold text-gray-800 mb-3">{d.title}</h4>
-                                    <p className="text-gray-600 text-sm leading-relaxed">{d.text}</p>
+                                    <p className="text-gray-600 text-sm leading-[1.9] capitalize">{d.text}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -483,7 +489,7 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                 </div>
 
                 {/* Summit Objectives */}
-                <div className="mt-16 -mb-40 md:-mb-80 grid grid-cols-1 md:grid-cols-2 gap-12 h-fit items-stretch">
+                <div className="mt-16 -mb-40 md:-mb-40 grid grid-cols-1 md:grid-cols-2 gap-12 h-fit items-stretch">
                     <motion.div
                         className="flex flex-col h-fit justify-between"
                         initial="hidden"
@@ -517,7 +523,7 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                         </ul>
                     </motion.div>
                     <motion.div
-                        className="h-[60%]"
+                        className="h-[80%]"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
