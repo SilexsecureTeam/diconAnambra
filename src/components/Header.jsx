@@ -30,7 +30,7 @@ export default function Header() {
           <FaBars />
         </button>
         {/* Mobile Menu Overlay */}
-        <div className={`fixed inset-0 bg-black bg-opacity-40 z-50 transition-opacity duration-300 ${open ? 'block' : 'hidden'}`} onClick={() => setOpen(false)}></div>
+        <div className={`fixed inset-0 bg-[rgb(0,0,0,0.9)] bg-opacity-40 z-50 transition-opacity duration-300 ${open ? 'block' : 'hidden'}`} onClick={() => setOpen(false)}></div>
         {/* Mobile Menu */}
         <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex justify-between items-center px-6 py-4 border-b">

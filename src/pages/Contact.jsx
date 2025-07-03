@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <section className="bg-white py-16 pt-26 px-4 md:px-16 min-h-[70vh]">
+      <section className="bg-white py-16 pt-18 px-4 md:px-16 min-h-[70vh]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-start mb-12">
             {/* Contact Form */}
