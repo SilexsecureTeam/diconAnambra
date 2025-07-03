@@ -380,7 +380,7 @@ export default function Home() {
 
                     {/* Deliverables */}
                     <motion.div
-                        className="bg-[#E5E5E5] py-12 px-16 rounded-lg"
+                        className="bg-[#E5E5E5] py-12 px-4 sm:px-8 md:px-16 rounded-lg"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
@@ -394,11 +394,11 @@ export default function Home() {
                                 Anambra State.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                             {deliverables.map((d, idx) => (
                                 <motion.div
                                     key={idx}
-                                    className="bg-white w-full p-6 rounded-lg shadow"
+                                    className="bg-white w-full max-w-full p-6 rounded-lg shadow"
                                     custom={idx}
                                     initial="hidden"
                                     whileInView="visible"
@@ -428,7 +428,7 @@ export default function Home() {
                         {features.slice(0, 4).map((feature, idx) => (
                             <motion.div
                                 key={idx}
-                                className="flex flex-col md:flex-row items-start md:items-start gap-6 h-full bg-white rounded-lg p-6"
+                                className="flex flex-col md:flex-row items-start md:items-start gap-6 h-full bg-white rounded-lg p-2 md:p-6"
                                 custom={idx}
                                 initial="hidden"
                                 whileInView="visible"
@@ -454,7 +454,7 @@ export default function Home() {
                         {features.slice(4).map((feature, idx) => (
                             <motion.div
                                 key={idx}
-                                className="flex flex-col items-center bg-white rounded-lg p-6 h-full justify-between"
+                                className="flex flex-col items-center bg-white rounded-lg p-2 md:p-6 h-full justify-between"
                                 custom={idx}
                                 initial="hidden"
                                 whileInView="visible"
