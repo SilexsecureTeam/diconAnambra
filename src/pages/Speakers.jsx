@@ -78,7 +78,7 @@ export default function Speakers() {
 		<>
 			<Header />
 			<motion.section
-				className="py-16 pt-26 px-4 md:px-16 bg-white min-h-[60vh]"
+				className="py-16 px-4 md:px-16 bg-gray-50 min-h-[60vh]"
 				initial="hidden"
 				animate="visible"
 				variants={fadeIn}

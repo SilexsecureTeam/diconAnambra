@@ -132,7 +132,7 @@ export default function Home() {
         <>
             <Header />
             <motion.section
-                className="bg-gray-100 py-22 px-16"
+                className="bg-gray-100 py-22 px-4 md:px-16"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -201,7 +201,7 @@ export default function Home() {
                         >
                             {/* Outer border div */}
                             <div
-                                className="relative max-w-[72%] ml-auto mr-5 h-[520px]" // Added fixed height
+                                className="relative w-full md:max-w-[72%] ml-auto mr-5 md:h-[520px]" // Added fixed height
                                 style={{
                                     clipPath: 'polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%)',
                                     background: '#000',
@@ -229,7 +229,7 @@ export default function Home() {
                                     Chief Host
                                 </div>
                             </div>
-                            <div className="absolute -bottom-10 w-[435px] right-0 mb-4 mr-4 bg-[#C08032] text-white px-4 py-2 text-sm">
+                            <div className="absolute md:-bottom-10 w-full md:w-[435px] md:right-0 mb-4 mr-4 bg-[#C08032] text-white px-4 py-2 text-sm">
                                 <div className="font-semibold">His Excellency,</div>
                                 <div>Prof. Charles Chukwuma Soludo, CFR</div>
                                 <div className="text-xs">Executive Governor, Anambra State</div>
@@ -242,7 +242,7 @@ export default function Home() {
             </motion.section>
             {/* Background & Rationale */}
             <motion.section
-                className="bg-white py-22 px-16"
+                className="bg-white py-22 px-4 md:px-16"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -272,7 +272,7 @@ export default function Home() {
                 </div>
             </motion.section>
             <motion.section
-                className="py-12 px-16 bg-white"
+                className="py-12 px-4 md:px-16 bg-white"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -343,7 +343,7 @@ export default function Home() {
                 </div>
             </motion.section>
             <motion.section
-                className="py-12 px-16 bg-white"
+                className="py-12 px-4 md:px-16 bg-white"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -398,7 +398,7 @@ export default function Home() {
                             {deliverables.map((d, idx) => (
                                 <motion.div
                                     key={idx}
-                                    className="bg-white p-6 rounded-lg shadow"
+                                    className="bg-white w-full p-6 rounded-lg shadow"
                                     custom={idx}
                                     initial="hidden"
                                     whileInView="visible"
@@ -415,7 +415,7 @@ export default function Home() {
                 </div>
             </motion.section>
             <motion.section
-                className="px-16 py-12 bg-white w-full mx-auto"
+                className="px-4 md:px-16 py-12 bg-white w-full mx-auto"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -474,7 +474,7 @@ export default function Home() {
                 </div>
 
                 {/* Summit Objectives */}
-                <div className="mt-16 -mb-80 grid grid-cols-1 md:grid-cols-2 gap-12 h-fit items-stretch">
+                <div className="mt-16 -mb-40 md:-mb-80 grid grid-cols-1 md:grid-cols-2 gap-12 h-fit items-stretch">
                     <motion.div
                         className="flex flex-col h-fit justify-between"
                         initial="hidden"

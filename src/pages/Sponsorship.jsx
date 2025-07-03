@@ -8,15 +8,15 @@ export default function Sponsorship() {
   return (
     <>
       <Header />
-      <section className="bg-white py-16 pt-26 px-4 md:px-16 min-h-[70vh]">
+      <section className="bg-white py-16 pt-20 px-4 md:px-16 min-h-[70vh]">
         <div className="w-full mx-auto">
           <div className="grid grid-cols-3 md:grid-cols-7 gap-8 items-center mb-12">
             {/* Images */}
-            <div className="col-span-2 flex gap-4">
+            <div className="col-span-3 md:col-span-2 flex gap-4">
               <img src={sponsor1} alt="Summit" className="w-full h-[400px] object-cover" />
               
             </div>
-            <div className="col-span-2 flex gap-4">
+            <div className="col-span-3 md:col-span-2 flex gap-4">
               <img src={sponsor2} alt="Summit" className="w-full h-[400px] object-cover" />
 
             </div>

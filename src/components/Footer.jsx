@@ -12,7 +12,7 @@ import linkedin from '../assets/Twitter.png';
 
 export default function Footer() {
     return (
-        <footer className="mt-16 bg-white px-16">
+        <footer className="mt-16 bg-white px-4 md:px-16">
             {/* Newsletter Signup */}
             <div className="bg-[#F2F2F2] py-8 px-10">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -22,13 +22,13 @@ export default function Footer() {
                             Subscribe to receive the latest news and updates about TDA. <br /> We promise not to spam you!
                         </p>
                     </div>
-                    <div className="mt-12 flex items-center w-[470px] relative">
+                    <div className="mt-12 flex items-center w-[300px] md:w-[470px] relative">
                         <input
                             type="email"
                             placeholder="Enter Email Address"
-                            className="flex-1 px-6 py-4 text-[#333333] bg-white rounded-md focus:outline-none w-full"
+                            className="flex-1 px-3 md:px-6 py-4 text-[#333333] bg-white rounded-md focus:outline-none w-full"
                         />
-                        <button className="bg-[#C08032] absolute right-6 text-white px-6 py-1.5 shadow-md rounded-md">
+                        <button className="bg-[#C08032] absolute right-3 md:right-6 text-white px-6 py-1.5 shadow-md rounded-md">
                             Continue
                         </button>
                     </div>
@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
 
             {/* Main Footer */}
-            <div className="bg-[#E5E5E5] py-8 px-4">
+            <div className="bg-[#E5E5E5] py-8 px-4 md:px-16">
                 <div className="max-w-7xl mx-auto text-center">
                     {/* Logo */}
                     <div className="mb-4">
@@ -47,7 +47,7 @@ export default function Footer() {
                         />
                     </div>
                     {/* Nav Links */}
-                    <nav className="space-x-6 mb-6">
+                    <nav className="space-x-6 space-y-3 flex flex-wrap justify-center !items-center mb-6">
                         <a href="#home" className="text-gray-700 hover:text-gray-900 text-sm">
                             Home
                         </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                         <a href="#speaker" className="text-gray-700 hover:text-gray-900 text-sm">
                             Speaker
                         </a>
-                        <a href="#contact" className="text-gray-700 hover:text-gray-900 text-sm">
+                        <a href="#contact" className="text-gray-700 hover:text-gray-900 text-sm m-0 p-0">
                             Contact Us
                         </a>
                     </nav>
