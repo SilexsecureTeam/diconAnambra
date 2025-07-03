@@ -37,32 +37,32 @@ import { motion } from 'framer-motion';
 const features = [
     {
         title: 'Holistic Understanding Of Regional Insecurities',
-        description: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris. Nunc id turpis id sodales tincidunt aliquet nam duis augue id ac.',
+        description: 'An in-depth appreciation of the dynamics of insecurity in Anambra and South-East, including political, socio-economic, and technological perspectives.',
         image: feature1,
     },
     {
         title: 'Informed Policy Making',
-        description: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris. Nunc id turpis id sodales tincidunt aliquet nam duis augue id ac.',
+        description: 'Evidence-based recommendations to inform future security policy and investment decisions by both state and federal government stakeholders',
         image: feature2,
     },
     {
-        title: 'Technology Adoption Roadmap',
-        description: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris. Nunc id turpis id sodales tincidunt aliquet nam duis augue id ac.',
+        title: 'Enhanced Stakeholder Collaboration',
+        description: 'Strengthened ties and operational synergy among the police, military, vigilante groups, local leaders, and the business community.',
         image: feature3,
     },
     {
-        title: 'Enhanced Stakeholder Collaboration',
-        description: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris. Nunc id turpis id sodales tincidunt aliquet nam duis augue id ac.',
+        title: 'Investment-Grade Security Commitments',
+        description: 'Assurances and frameworks that improve investor confidence through demonstrable government commitment to peace and order',
         image: feature4,
     },
     {
-        title: 'Investment-Grade Security Commitments',
-        description: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris. Nunc id turpis id sodales tincidunt aliquet nam duis augue id ac.',
+        title: 'Technology Adoption Roadmap',
+        description: 'Clear guidance on the adoption and implementation of security technologies—drones, surveillance cameras, command centers, GPS trackers, and AI-powered analysis tools.',
         image: feature5,
     },
     {
         title: 'Community Empowerment And Participation',
-        description: 'Lorem ipsum dolor sit amet consectetur. Felis integer eget nunc orci fames integer diam est. Non ultricies eget auctor mauris. Nunc id turpis id sodales tincidunt aliquet nam duis augue id ac.',
+        description: 'Structures for integrating local communities in the security ecosystem through awareness, empowerment, and participation in neighbourhood watch systems.',
         image: feature6,
     },
 ];
@@ -183,11 +183,11 @@ export default function Home() {
                             <div className="flex flex-col space-y-7 flex-wrap space-x-6 text-gray-700 text-[15px]">
                                 <div className="flex items-center space-x-2">
                                     <img src={date} alt="" className='w-[36px]' />
-                                    <span>July, 30th - 31st, <br /> 9:00 AM</span>
+                                    <span><b>July, 30th - 31st, </b><br /> 9:00 AM</span>
                                 </div>
                                 <div className="flex items-center space-x-2 mt-2 sm:mt-0">
                                     <img src={location} alt="" className='w-[36px]' />
-                                    <span>International Conference <br /> Awka, Anambra</span>
+                                    <span><b> International Conference </b><br /> Awka, Anambra</span>
                                 </div>
                             </div>
 
@@ -315,15 +315,15 @@ Against this backdrop, the Anambra Security Summit is conceived as a strategic, 
                         {profiles.map((p, idx) => (
                             <motion.div
                                 key={idx}
-                                className="text-center"
+                                className={`text-center flex flex-col items-center justify-start p-3 pl-[30%] bg-white border-[#B5B5C180] ${idx !== 0 ? 'lg:border-l' : ''}`}
                                 custom={idx}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.2 }}
                                 variants={fadeUp}
                             >
-                                <div className="overflow-hidden mb-4">
-                                    <img src={p.img} alt={p.name} className="w-full h-auto" />
+                                <div className="overflow-hidden mb-4 w-[200px] h-[240px] bg-[#C08032]">
+                                    <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-800">
                                     {p.name}
