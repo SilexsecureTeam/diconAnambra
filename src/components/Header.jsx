@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/logo.png'; 
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -9,8 +10,8 @@ export default function Header() {
       <div className="w-full mx-auto flex items-center justify-between px-0 py-3">
         {/* Logo */}
         <NavLink to="/" className="flex items-center gap-2">
-          {/* <img src="https://random.imagecdn.app/60/60" alt="Logo" className="h-10 w-10 object-cover rounded-full" /> */}
-          <span className="font-bold text-lg text-[#C08032]">Dicon Anambra</span>
+          <img src={logo} alt="Logo" className="h-14 md:h-16" />
+          {/* <span className="font-bold text-lg text-[#C08032]">Dicon Anambra</span> */}
         </NavLink>
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
@@ -34,7 +35,7 @@ export default function Header() {
         {/* Mobile Menu */}
         <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex justify-between items-center px-6 py-4 border-b">
-            <span className="font-bold text-lg text-[#C08032]">Dicon Anambra</span>
+            <img src={logo} alt="Logo" className="h-14 md:h-16" />
             <button className="text-2xl text-[#C08032]" onClick={() => setOpen(false)}><FaTimes /></button>
           </div>
           <nav className="flex flex-col gap-6 px-6 py-8">
