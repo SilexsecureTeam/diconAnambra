@@ -218,17 +218,17 @@ export default function Home() {
                         >
                             {/* Outer border div */}
                             <div
-                                className="relative w-full md:max-w-[72%] ml-auto mr-5" // Removed md:h-[520px]
+                                className="relative w-full md:max-w-[72%] ml-auto mr-5"
                                 style={{
                                     clipPath: 'polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%)',
                                     background: '#000',
-                                    padding: '4px', // border thickness
+                                    padding: '4px',
                                     boxSizing: 'border-box',
                                 }}
                             >
                                 {/* Inner image div */}
                                 <div
-                                    className="h-auto min-h-[300px]" // Use min-h for structure, h-auto for flexibility
+                                    className="h-auto min-h-[300px] flex items-end justify-center" // Center image at bottom
                                     style={{
                                         clipPath: 'polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%)',
                                         background: '#C08032',
@@ -238,8 +238,8 @@ export default function Home() {
                                     <img
                                         src={hostImg}
                                         alt="Chief Host"
-                                        className="w-full h-full object-cover"
-                                        style={{ display: 'block', maxHeight: '520px' }} // Prevents image from overflowing
+                                        className="object-contain max-h-[420px] w-auto mx-auto"
+                                        style={{ display: 'block', maxHeight: '420px', width: 'auto', height: '100%' }}
                                     />
                                 </div>
                                 <div className="absolute bottom-0 rounded-sm -right-5 z-10 w-[300px] bg-black bg-opacity-75 text-white text-center py-2">
