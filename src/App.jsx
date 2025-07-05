@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound';
 import Speakers from './pages/Speakers';
 import Contact from './pages/Contact';
 import Sponsorship from './pages/Sponsorship';
+import ProgramEvent from './pages/ProgramEvent';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sponsorship" element={<Sponsorship />} />
+        <Route path="/program-event" element={<ProgramEvent />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
